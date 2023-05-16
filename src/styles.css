@@ -1,0 +1,110 @@
+body {
+  padding: 30px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1400px;
+}
+
+form {
+  text-align: center;
+}
+header {
+  background-image: url("../Images/blueridgemountains.png");
+  margin: 100px 150px 100px 150px;
+  padding: 50px;
+  border-radius: 8px;
+}
+.btn {
+  color: plum;
+
+  background: darkblue;
+  margin-top: 5px;
+
+  float: right;
+
+  position: relative;
+  left: -45%;
+  text-align: left;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+#search-button:hover {
+  cursor: pointer;
+  width: 20px;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+  display: inline;
+  font-size: 75px;
+}
+
+h2 {
+  text-align: center;
+  color: #ffff;
+  display: inline;
+  padding: 200px;
+  margin-left: 200px;
+}
+
+h3 {
+  color: #ffff;
+  display: inline;
+  font-size: 20px;
+  margin-left: 320px;
+}
+h4 {
+  color: #ffff;
+  display: inline;
+  padding: 320px;
+  font-size: 70px;
+  margin-left: 100px;
+}
+p {
+  color: #ffff;
+  display: block;
+  font-size: 20px;
+  margin-left: 425px;
+}
+
+.row {
+  margin: 50px 50px 50px 150px;
+}
+
+.thursday {
+  background: #ffff;
+  color: darkgrey;
+  border-radius: 80px;
+  padding: 10px;
+}
+
+.friday {
+  background: #ffff;
+  color: darkgray;
+  border-radius: 80px;
+  padding: 10px;
+}
+
+.saturday {
+  background: #ffff;
+  color: darkgrey;
+  border-radius: 80px;
+  padding: 10px;
+}
+
+.sunday {
+  background: #ffff;
+  color: darkgrey;
+  border-radius: 80px;
+  padding: 10px;
+}
+
+.monday {
+  background: #ffff;
+  color: darkgrey;
+  border-radius: 80px;
+  padding: 10px;
