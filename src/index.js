@@ -87,3 +87,5 @@ navigator.geolocation.getCurrentPosition(retrievePosition);
 
 let button = document.querySelector("#current-location-button");
 button.addEventListener("click", retrievePosition);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
