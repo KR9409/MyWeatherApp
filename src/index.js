@@ -44,10 +44,15 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector("#temperature-description");
+  let iconElement = document.querySelector("icon");
 
   h2.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   temperatureElement.innerHTML = `${temperature}°C`;
+  iconElement.setAttribute(
+    "src",
+    "http://openweathermap.org/img/wn/${}@2x.png"
+  );
 }
 
 function search(event) {
