@@ -15,27 +15,6 @@ header {
   padding: 50px;
   border-radius: 8px;
 }
-.btn {
-  color: plum;
-
-  background: darkblue;
-  margin-top: 5px;
-
-  float: right;
-
-  position: relative;
-  left: -45%;
-  text-align: left;
-}
-.btn:hover {
-  cursor: pointer;
-  opacity: 50%;
-}
-#search-button:hover {
-  cursor: pointer;
-  width: 20px;
-  padding: 5px;
-}
 
 h1 {
   text-align: center;
@@ -66,7 +45,9 @@ h4 {
 
 p {
   color: #ffff;
-  display: block;
+  margin-top: 30px;
+  margin-right: 50px;
+
   font-size: 20px;
 }
 
@@ -125,6 +106,27 @@ p {
 #icon {
   font-size: 30px;
 }
-.container {
-  text-align: center;
+.btn {
+  color: plum;
+
+  background: darkblue;
+  margin-top: 5px;
+
+  float: right;
+
+  position: relative;
+  left: -45%;
+  text-align: left;
+}
+.btn:hover {
+  cursor: pointer;
+  opacity: 50%;
+}
+.searchHere {
+  background-color: darkorange;
+  color: blue;
+  opacity: 50%;
+}
+.searchHere:hover {
+  cursor: pointer;
 }
