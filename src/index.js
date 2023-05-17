@@ -53,7 +53,7 @@ function showTemperature(response) {
   description.innerHTML = response.data.weather[0].description;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -72,6 +72,7 @@ function search(event) {
     alert("Please type a city");
   }
 }
+searchCity("Asheville");
 
 function searchCity(city) {
   let apiKey = "50c2acd53349fabd54f52b93c8650d37";
@@ -86,7 +87,7 @@ function retrievePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
-let celsiusTemperature = null;
+
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -101,9 +102,12 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   celsiusLink.classList.add("active");
+
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(displayCelsiusTemperature);
 }
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
@@ -117,5 +121,3 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("celsius-Link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
-search("Asheville");
