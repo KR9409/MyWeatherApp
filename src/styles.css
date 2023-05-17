@@ -112,6 +112,9 @@ p {
 }
 .units {
   font-size: 25px;
+  margin-left: 425px;
+  display: block;
+  font-size: 15px;
 }
 
 .active {

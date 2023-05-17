@@ -44,7 +44,7 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   let description = document.querySelector("#temperature-description");
-  let iconElement = document.querySelector("icon");
+  let iconElement = document.querySelector("#icon");
 
   celsiusTemperature = response.data.main.temp;
 
@@ -115,3 +115,5 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 let celsiusLink = document.querySelector("celsius-Link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+search("Asheville");
