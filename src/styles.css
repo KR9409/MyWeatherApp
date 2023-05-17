@@ -59,40 +59,6 @@ li {
   margin: 50px 50px 50px 150px;
 }
 
-.thursday {
-  background: #ffff;
-  color: darkgrey;
-  border-radius: 80px;
-  padding: 10px;
-}
-
-.friday {
-  background: #ffff;
-  color: darkgray;
-  border-radius: 80px;
-  padding: 10px;
-}
-
-.saturday {
-  background: #ffff;
-  color: darkgrey;
-  border-radius: 80px;
-  padding: 10px;
-}
-
-.sunday {
-  background: #ffff;
-  color: darkgrey;
-  border-radius: 80px;
-  padding: 10px;
-}
-
-.monday {
-  background: #ffff;
-  color: darkgrey;
-  border-radius: 80px;
-  padding: 10px;
-}
 .units {
   font-size: 25px;
 
@@ -137,4 +103,13 @@ li {
 }
 #search-text-input {
   position: relative;
+}
+.weather-forcast {
+  background: #ffff;
+  color: darkgrey;
+  border-radius: 80px;
+  padding: 10px;
+}
+.weather-forecast-date {
+  font-size: 16px;
 }
