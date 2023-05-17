@@ -44,7 +44,7 @@ function showTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
   let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#windSpeed");
+  let windElement = document.querySelector("#wind");
   let description = document.querySelector("#temperature-description");
   let iconElement = document.querySelector("#icon");
 
@@ -59,6 +59,9 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function search(event) {
