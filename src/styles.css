@@ -50,6 +50,10 @@ p {
 
   font-size: 20px;
 }
+li {
+  color: #ffff;
+  font-size: 20px;
+}
 
 .row {
   margin: 50px 50px 50px 150px;

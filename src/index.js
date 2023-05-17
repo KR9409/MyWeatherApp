@@ -39,29 +39,26 @@ if (minutes < 10) {
 h3.innerHTML = `${day}, ${month} ${date} ${year} ${hour}:${minutes}`;
 
 function showTemperature(response) {
-  console.log(response);
+  console.log(response.data.main.temp);
   let h2 = document.querySelector("h2");
-  let temperature = Math.round(response.data.main.temp);
   let temperatureElement = document.querySelector("#temperature");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
   let description = document.querySelector("#temperature-description");
   let iconElement = document.querySelector("#icon");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
 
   celsiusTemperature = response.data.main.temp;
 
   h2.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
-  temperatureElement.innerHTML = `${temperature}°C`;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  getForecast(response.data.coord);
 }
 
 function search(event) {
@@ -89,7 +86,7 @@ function retrievePosition(position) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showTemperature);
 }
-
+let celsiusTemperature = null;
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -107,8 +104,6 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(displayCelsiusTemperature);
 }
-
-let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
