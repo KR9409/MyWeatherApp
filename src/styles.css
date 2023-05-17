@@ -130,7 +130,11 @@ li {
   background-color: darkorange;
   color: blue;
   opacity: 50%;
+  position: relative;
 }
 .searchHere:hover {
   cursor: pointer;
+}
+#search-text-input {
+  position: relative;
 }
