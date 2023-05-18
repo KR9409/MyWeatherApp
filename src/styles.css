@@ -106,8 +106,12 @@ li {
 }
 .weather-forcast {
   background: #ffff;
-  color: darkgrey;
+  color: darkblue;
   border-radius: 80px;
-  padding: 10px;
+  padding: 2px;
   position: relative;
+  opacity: 75%;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.5;
 }
