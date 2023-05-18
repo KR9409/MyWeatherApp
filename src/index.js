@@ -79,7 +79,7 @@ searchCity("Asheville");
 
 function searchCity(city) {
   let apiKey = "50c2acd53349fabd54f52b93c8650d37";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   axios.get(apiURL).then(showTemperature);
 }
 
@@ -87,27 +87,8 @@ function retrievePosition(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiKey = "50c2acd53349fabd54f52b93c8650d37";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(showTemperature);
-}
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let displayFahrenheitTemperature = (displayCelsiusTemperature * 9) / 5 + 32;
-
-  temperatureElement.innerHTML = Math.round(displayFahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.add("active");
-
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(displayCelsiusTemperature);
 }
 
 function formatDay(timestamp) {
@@ -164,7 +145,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = "50c2acd53349fabd54f52b93c8650d37";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
 
